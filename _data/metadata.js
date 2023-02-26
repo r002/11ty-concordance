@@ -1,11 +1,11 @@
 module.exports = {
-	"title": "Eleventy Base Blog v8",
-	"url": "https://example.com/",
+	"title": "11ty Concordance",
+	"url": "https://r002.github.io/11ty-concordance/",
 	"language": "en",
-	"description": "I am writing about my experiences as a naval navel-gazer.",
+	"description": "Experimenting with 11ty to create a concordance.",
 	"author": {
-		"name": "Your Name Here",
+		"name": "Robert Lin",
 		"email": "youremailaddress@example.com",
-		"url": "https://example.com/about-me/"
+		"url": "https://r002.github.io/11ty-concordance/"
 	}
 }
