@@ -31,29 +31,30 @@
 		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
 		<style>{% getBundle "css" %}</style>
 	</head>
-	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
+  <body>
+    <header>
+      <div>
+        <h1 class="home"><a href="{{ '/' }}">{{ metadata.title }}</a></h1>
+        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+        <div class="nav">
+        {%- for entry in collections.all | eleventyNavigation %}
+          <div class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+          </div>
+        {%- endfor %}
+        </div>
+      </div>
+      <div style="font-family: Consolas; font-size: 14px; font-style: italic; margin-top: 26.5px; margin-left: 30px;">
+        Daily dispatches on life, love, and other inscrutable mysteries of the universe.
+      </div>
+    </header>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      {{ content | safe }}
+    </main>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
-			</nav>
-		</header>
+    <footer></footer>
 
-		<main id="skip">
-			{{ content | safe }}
-		</main>
-
-		<footer></footer>
-
-		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
-	</body>
+    <!-- Current page: {{ page.url | url }} -->
+  </body>
 </html>

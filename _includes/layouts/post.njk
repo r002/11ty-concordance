@@ -1,22 +1,70 @@
 ---
 layout: layouts/base.njk
+templateClass: tmpl-post
 ---
-{%- css %}
-/* Only include the syntax highlighter CSS on blog posts */
-{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
-{% include "public/css/prism-diff.css" %}
-{%- endcss %}
-<h1>{{ title }}</h1>
+{% set currentPost = collections.posts | getCollectionItem(page)%}
 
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+{# Remove referenceMatter from word count #}
+{% set regExpCode = r/<div class="referenceMatter">referenceMatter<\/div>(.|\n)*?<div class="referenceMatter">referenceMatter<\/div>/gm %}
+{% set fixedContent = currentPost.template.frontMatter.content | replace(regExpCode, "") %}
 
-{{ content | safe }}
+{# Remove nunjucks markup from word count #}
+{% set regExpCode = r/\{\%(.|\n)*?\%\}/gm %}
+{% set fixedContent = fixedContent | replace(regExpCode, "") %}
+
+{# {% set fixedContent = fixedContent | striptags %} #}
+{% set wordCount = fixedContent | getWordCount %}
+{# {% set wordCount = currentPost.template.frontMatter.content | striptags | getWordCount %} #}
+{% set readingRate = 225 %}
+{% set readingTime = (wordCount/readingRate) | round %}
+{% if readingTime < 1 %}{% set readingTime = 1 %}{% endif %}
+
+{# Remove referenceMatter markers #}
+{% set regExpCodeRm = r/<div class="referenceMatter">referenceMatter<\/div>/gm %}
+{% set content = content | replace(regExpCodeRm, "") %}
+
+{# Replace "double white space" with "&ensp;" #}
+{% set regExpCodeSp = r/  /gm %}
+{% set spContent = content | replace(regExpCodeSp, "&ensp;") %}
+
+{%- if collections.posts %}
+{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{%- if nextPost or previousPost %}
+  <div style="display: flex; justify-content: space-between; margin-top: 5px; margin-bottom: 20px;">
+    <div style='line-height: 10px;'>
+      {%- if previousPost %}
+        ⇜ PREVIOUS<br />
+        <a href="{{ previousPost.url }}">{{ previousPost.data.title | shortenTitle }}</a>
+      {% endif %}
+    </div>
+    <div style='line-height: 10px; text-align: right;'>
+      {%- if nextPost %}
+        NEXT ⇝<br />
+        <a href="{{ nextPost.url }}">{{ nextPost.data.title | shortenTitle }}</a>
+      {% endif %}
+    </div>
+  </div>
+{%- endif %}
+{%- endif %}
+
+<postheader>
+  <div class='title'>{{ title }}</div>
+  <div class='subtitle'>{{ description }}</div>
+  <readingstats datetime="{{ page.date | htmlDateString }}">📅 {{ page.date | readableDate }}&ensp;• 💬 {{ wordCount | numCommas }} words&ensp;• ⌛ Reading time: {{ readingTime }} minute{% if readingTime > 1 %}s{% endif %}
+  </readingstats>
+
+  <div class='tags'>
+    {%- for tag in tags | filterTagList %}
+    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+    <span>
+      <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+    </span>
+    {%- endfor %}
+  </div>
+</postheader>
+
+{{ spContent | safe }}
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}

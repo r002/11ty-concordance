@@ -27,42 +27,37 @@
 	</url>
 	
 	<url>
-		<loc>https://r002.github.io/11ty-concordance/about/</loc>
-		<lastmod>2023-02-26</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://r002.github.io/11ty-concordance/blog/</loc>
-		<lastmod>2023-02-26</lastmod>
+		<loc>https://r002.github.io/11ty-concordance/archive/</loc>
+		<lastmod>2023-02-27</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://r002.github.io/11ty-concordance/</loc>
-		<lastmod>2023-02-26</lastmod>
+		<lastmod>2023-02-27</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://r002.github.io/11ty-concordance/tags/</loc>
-		<lastmod>2023-02-26</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://r002.github.io/11ty-concordance/tags/number-2/</loc>
-		<lastmod>2023-02-26</lastmod>
+		<lastmod>2023-02-27</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://r002.github.io/11ty-concordance/tags/another-tag/</loc>
-		<lastmod>2023-02-26</lastmod>
+		<lastmod>2023-02-27</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://r002.github.io/11ty-concordance/tags/number-2/</loc>
+		<lastmod>2023-02-27</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://r002.github.io/11ty-concordance/tags/second-tag/</loc>
-		<lastmod>2023-02-26</lastmod>
+		<lastmod>2023-02-27</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://r002.github.io/11ty-concordance/tags/posts-with-two-tags/</loc>
-		<lastmod>2023-02-26</lastmod>
+		<lastmod>2023-02-27</lastmod>
 	</url>
 </urlset>

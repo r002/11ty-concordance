@@ -34,6 +34,17 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 
+	// Shortcodes
+	eleventyConfig.addPairedShortcode("quote", (content, author, source, url) => {
+		return `<div class="quote">
+					<div class="quote_content">${content}</div>
+					<div class="quote_author">🧑 ${author}</div>
+					<div class="quote_source">🎈 ${source}</div>
+					<div class="quote_navigate"><a href="${url}">🌎</a></div>
+				</div>`;
+	});
+
+
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
@@ -44,6 +55,21 @@ module.exports = function(eleventyConfig) {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
 		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
 	});
+
+	eleventyConfig.addFilter("numCommas", (value) => {
+		return value?.toLocaleString() ?? "0"
+	});
+
+	eleventyConfig.addFilter('shortenTitle', (title) => {
+		if(title.length>25) {
+		  return title.substring(0, 22).trim() + '...';
+		}
+		return title;
+	  });
+	
+	  eleventyConfig.addFilter('getWordCount', (content) => {
+		return content?.split(/\s[^\s]/).length ?? 0;
+	  });
 
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
@@ -131,6 +157,6 @@ module.exports = function(eleventyConfig) {
 		// When paired with the HTML <base> plugin https://www.11ty.dev/docs/plugins/html-base/
 		// it will transform any absolute URLs in your HTML to include this
 		// folder name and does **not** affect where things go in the output folder.
-		pathPrefix: "11ty-concordance/",
+		pathPrefix: "/11ty-concordance/",
 	};
 };

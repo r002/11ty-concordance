@@ -5,24 +5,16 @@ date: 2023-02-26
 tags:
   - another tag
 ---
-Robert was here! Feb 26, 2023
+# Robert was here! Feb 26, 2023
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+
+{% quote "Michelle Obama", "Michelle Obama talks parenting, partnership and turning your rage into change | NPR", "https://www.youtube.com/watch?v=H_-iU6AW1c0&t=341s" %}
+<strong><em>Marriage is never 50/50…</em></strong> if you stick with it, <strong><em>over the course of your entire relationship</em></strong>, you <strong><em>may</em></strong> have 50/50 over time. But if I look over my marriage, if I were to judge it in year 5 or year 10, <strong><em>it was never 50/50.</em></strong> Someone was always giving <strong><em>way</em></strong> more…
+{% endquote %}
 
 Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
 
 ## Section Header
 
 Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-
-```diff-js
- // this is a command
- function myCommand() {
-+  let counter = 0;
--  let counter = 1;
-   counter++;
- }
-
- // Test with a line break above this line.
- console.log('Test');
-```
