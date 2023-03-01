@@ -37,10 +37,11 @@ module.exports = function(eleventyConfig) {
 	// Shortcodes
 	eleventyConfig.addPairedShortcode("quote", (content, author, source, url) => {
 		return `<div class="quote">
-					<div class="quote_content">${content}</div>
-					<div class="quote_author">🧑 ${author}</div>
-					<div class="quote_source">🎈 ${source}</div>
 					<div class="quote_navigate"><a href="${url}">🌎</a></div>
+					<div class="quote_author">
+						<strong>${author}</strong> <span class="quote_source">${source}</span>
+					</div>
+					<div class="quote_content">${content}</div>
 				</div>`;
 	});
 

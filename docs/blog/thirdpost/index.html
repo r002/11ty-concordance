@@ -94,12 +94,15 @@
   .quote {
 	/* background-color: #FED8B1; */
 	position: relative;
-	background-color: orange;
-	color: black;
+	background-color: #181c20;
+	--text-color: var(--color-gray-90);
 	/* padding: 14px 20px; */
 	border: 1px white solid;
-	border-radius: 20px 20px 0 0;
+	/* border-radius: 20px 20px 0 0; */
+	/* border-radius: 20px; */
 	transition: 50ms linear; 
+	font-size: 20px;
+	box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
   }
 
   .quote:hover {
@@ -107,32 +110,45 @@
   }
 
   .quote_content {
-	font-size: 18px;
-	line-height: 1.45;
-	padding-bottom: 10px;
+	line-height: 1.55;
 	border-bottom: 1px black solid;
 	padding: 14px 20px;
+	padding-bottom: 25px;
   }
 
   .quote_author {
-	background-color: #FED8B1;
+	line-height: 1.15;
+	background-color: orange;
+	color: black;
 	padding-top: 15px;
 	padding-bottom: 6px;
 	padding-left: 20px;
+	padding-bottom: 14px;
+	/* border-radius: 0 0 20px 20px; */
+	font-size: 18px;
   }
 
   .quote_source {
+	/* background-color: #FED8B1; */
+	padding-left: 8px;
+	/* padding-bottom: 14px; */
+	font-style: italic;
+	opacity: .7;
+  }
+
+  /* .quote_source {
 	background-color: #FED8B1;
 	padding-left: 20px;
 	padding-bottom: 14px;
-  }
+	font-style: italic;
+  } */
 
   .quote_navigate {
 	position: absolute;
 	/* background-color: red; */
-	font-size: 35px;
-	right: 20px;
-	bottom: 10px;
+	font-size: 22px;
+	right: 13px;
+	top: 10px;
   }
 
   /* ol {
