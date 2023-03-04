@@ -47,6 +47,16 @@ module.exports = function(eleventyConfig) {
 
 
 	// Filters
+	eleventyConfig.addFilter("extractQuotes", (body) => {
+		// console.log("------------------------ body:", body);
+		const re = /<div class="quote">[\s\S]*?<\/div>\s*?<\/div>/g;
+		const rs = Array.from(body.matchAll(re));
+		// for(const match of rs) {
+		// 	console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>", match[0]);
+		// }
+		return rs.map(arr => arr[0]).join("<p></p>");
+	});
+
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
 		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");

@@ -4,7 +4,7 @@
 	<subtitle>Experimenting with 11ty to create a concordance.</subtitle>
 	<link href="https://r002.github.io/11ty-concordance/feed/feed.xml" rel="self"/>
 	<link href="https://r002.github.io/11ty-concordance/11ty-concordance/"/>
-	<updated>2023-02-26T00:00:00Z</updated>
+	<updated>2023-03-01T00:00:00Z</updated>
 	<id>https://r002.github.io/11ty-concordance/</id>
 	<author>
 		<name>Robert Lin</name>
@@ -12,12 +12,34 @@
 	</author>
 	
 	<entry>
-		<title>Robert was here!</title>
+		<title>The Cycle of Civilization</title>
+		<link href="https://r002.github.io/11ty-concordance/blog/secondpost/"/>
+		<updated>2023-03-01T00:00:00Z</updated>
+		<id>https://r002.github.io/11ty-concordance/blog/secondpost/</id>
+		<content type="html">&lt;p&gt;Leverage agile.&lt;/p&gt;
+&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;header-anchor&quot; href=&quot;https://r002.github.io/11ty-concordance/blog/secondpost/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://r002.github.io/11ty-concordance/blog/firstpost/&quot;&gt;First post&lt;/a&gt;
+&lt;a href=&quot;https://r002.github.io/11ty-concordance/blog/thirdpost/&quot;&gt;Third post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bring to the table,&lt;/p&gt;
+&lt;div class=&quot;quote&quot;&gt;
+					&lt;div class=&quot;quote_navigate&quot;&gt;&lt;a href=&quot;https://www.goodreads.com/quotes/8751435-hard-times-create-strong-men-strong-men-create-good-times&quot;&gt;🌎&lt;/a&gt;&lt;/div&gt;
+					&lt;div class=&quot;quote_author&quot;&gt;
+						&lt;strong&gt;📕 G. Michael Hopf&lt;/strong&gt; &lt;span class=&quot;quote_source&quot;&gt;Those Who Remain&lt;/span&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;quote_content&quot;&gt;
+Hard times create strong men. Strong men create good times. Good times create weak men. And, weak men create hard times.
+&lt;/div&gt;
+				&lt;/div&gt;
+&lt;p&gt;Capitalize the banks.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>On Marriage and Interesting People</title>
 		<link href="https://r002.github.io/11ty-concordance/blog/firstpost/"/>
 		<updated>2023-02-26T00:00:00Z</updated>
 		<id>https://r002.github.io/11ty-concordance/blog/firstpost/</id>
-		<content type="html">&lt;h1 id=&quot;robert-was-here-feb-26-2023&quot; tabindex=&quot;-1&quot;&gt;Robert was here! Feb 26, 2023 &lt;a class=&quot;header-anchor&quot; href=&quot;https://r002.github.io/11ty-concordance/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.&lt;/p&gt;
+		<content type="html">&lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.&lt;/p&gt;
 &lt;div class=&quot;quote&quot;&gt;
 					&lt;div class=&quot;quote_navigate&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=H_-iU6AW1c0&amp;t=341s&quot;&gt;🌎&lt;/a&gt;&lt;/div&gt;
 					&lt;div class=&quot;quote_author&quot;&gt;
@@ -88,20 +110,6 @@ function myCommand() {
 console.log(&#39;Test&#39;);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;header-anchor&quot; href=&quot;https://r002.github.io/11ty-concordance/blog/thirdpost/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>This is my second post with a much longer title.</title>
-		<link href="https://r002.github.io/11ty-concordance/blog/secondpost/"/>
-		<updated>2018-07-04T00:00:00Z</updated>
-		<id>https://r002.github.io/11ty-concordance/blog/secondpost/</id>
-		<content type="html">&lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.&lt;/p&gt;
-&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;header-anchor&quot; href=&quot;https://r002.github.io/11ty-concordance/blog/secondpost/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://r002.github.io/11ty-concordance/blog/firstpost/&quot;&gt;First post&lt;/a&gt;
-&lt;a href=&quot;https://r002.github.io/11ty-concordance/blog/thirdpost/&quot;&gt;Third post&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.&lt;/p&gt;
 &lt;p&gt;Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.&lt;/p&gt;
 </content>
 	</entry>

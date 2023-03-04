@@ -1,0 +1,19 @@
+---
+layout: layouts/home.njk
+permalink: /excerpts/
+eleventyNavigation:
+  key: Excerpts
+  order: 2
+---
+<h1>Excerpts</h1>
+
+{% set postslist = collections.posts %}
+
+{% for post in postslist | reverse %}
+  <p>
+    <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
+    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+    <br /><br />
+    {{ post.content | extractQuotes | safe }}<br />    
+  </p>
+{% endfor %}

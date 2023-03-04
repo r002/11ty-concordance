@@ -1,12 +1,10 @@
 ---
-title: Robert was here!
-description: This is a post on My Blog about agile frameworks.
+title: On Marriage and Interesting People
+description: Michelle Obama dispenses wisdom
 date: 2023-02-26
 tags:
   - another tag
 ---
-# Robert was here! Feb 26, 2023
-
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
 {% quote "📻 Michelle Obama", "NPR - All Things Considered", "https://www.youtube.com/watch?v=H_-iU6AW1c0&t=341s" %}
